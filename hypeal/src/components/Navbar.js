@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
-import {Grid, Box, Button} from "@mui/material";
+import {Grid, Box} from "@mui/material";
+import HButton from "./HButton.js";
 import hypealLogo from "./hypealLogo.webp"
 
 export default function Navbar(props) {
@@ -14,7 +15,7 @@ export default function Navbar(props) {
           <Grid item>
             <Grid container direction={"row"} columnGap={4} alignItems={"center"}>
               <Grid item>
-                <Button style={{backgroundColor:"yellow", color:"black"}} variant="contained">Get started</Button>
+                <HButton>Get started</HButton>
               </Grid>
             </Grid>
           </Grid>
