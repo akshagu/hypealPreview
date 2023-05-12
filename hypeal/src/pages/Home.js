@@ -4,6 +4,8 @@ import {Grid, Typography, TextField} from "@mui/material";
 import HButton from "../components/HButton.js";
 import HInput from "../components/HInput";
 import HomeCards from "./HomeCards"
+import HomeInvest from "./HomeInvest";
+import HomeLaunch from "./HomeLaunch";
 function Home() {
 
   return (
@@ -32,6 +34,8 @@ function Home() {
         <img className="Background" src={HomeSection1}/>
       </div>
       <HomeCards/>
+      <HomeInvest/>
+      <HomeLaunch/>
     </div>
   );
 }
