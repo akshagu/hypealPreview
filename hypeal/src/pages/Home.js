@@ -3,7 +3,7 @@ import HomeSection1 from "../components/HomeSection1.webp"
 import {Grid, Typography, TextField} from "@mui/material";
 import HButton from "../components/HButton.js";
 import HInput from "../components/HInput";
-
+import HomeCards from "./HomeCards"
 function Home() {
 
   return (
@@ -31,6 +31,7 @@ function Home() {
         </Grid>
         <img className="Background" src={HomeSection1}/>
       </div>
+      <HomeCards/>
     </div>
   );
 }
