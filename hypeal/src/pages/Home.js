@@ -1,24 +1,15 @@
-import logo from '../logo.svg';
+import React from "react";
+import HomeSection1 from "../components/HomeSection1.webp"
 
-const Home = () => {
+function Home() {
+
   return (
-    <>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </>
+    <div className="Home">
+      <div className="Section">
+        <img style={{width:"100vw"}} src={HomeSection1}/>
+      </div>
+    </div>
   );
-};
+}
 
 export default Home;
