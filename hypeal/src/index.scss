@@ -28,22 +28,31 @@ code {
 .Home {
   width: 100%;
   height: 100%;
-  padding-top: 90px;
   scroll-snap-type: y mandatory;
   overflow: scroll;
 }
 
-.HomeBase .Section {
-  position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
-  padding-top: clamp(30px, 4vw, 50px);
-  padding-bottom: 5vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  overflow: hidden;
+.Home .Section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  padding-top: calc(50px + 4vw);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.Home .Background {
+  position: absolute;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  z-index: -1;
 }
