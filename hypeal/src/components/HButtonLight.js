@@ -13,10 +13,13 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const HButtonLight = ({children}) => {
+const HButtonLight = ({children,tw}) => {
   return (
-    <StyledButton>
+    <StyledButton >
+      <div className={tw}> 
+
       {children}
+      </div>
     </StyledButton>
   );
 };

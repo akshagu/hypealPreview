@@ -20,37 +20,18 @@ const CellContainer = styled(Box)(({ theme }) => ({
 
 const HomePartners = () => {
   return (
-    <SectionContainer>
-      <Box border="0px solid #E0E0E0" borderRadius="0px">
-        <Grid container spacing={0}>
-          <Grid item>
-            <CellContainer>
-              <Typography color={"white"}>Our Partners</Typography>
-            </CellContainer>
-          </Grid>
-          <Grid item>
-            <CellContainer>
-              <img style={{height:"90px"}} src={forbes} alt="1" />
-            </CellContainer>
-          </Grid>
-          <Grid item>
-            <CellContainer>
-              <img style={{height:"40px"}} src={tedx} alt="2" />
-            </CellContainer>
-          </Grid>
-          <Grid item>
-            <CellContainer>
-              <img style={{height:"40px"}} src={bbc} alt="3" />
-            </CellContainer>
-          </Grid>
-          <Grid item>
-            <CellContainer>
-              <img style={{height:"40px"}} src={discovery} alt="4" />
-            </CellContainer>
-          </Grid>
-        </Grid>
-      </Box>
-    </SectionContainer>
+    <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-black px-8 py-16'>
+      <div className='flex items-center justify-center border-gray-400 border-[0.25px]'>
+        <p className='text-5xl font-semibold text-white'>Our <span className='block text-[#FFEC01]'>Partners</span></p>
+      </div>
+        
+      {[discovery, bbc, tedx, forbes].map((item => (
+        <div className='flex items-center justify-center border-gray-400 border-[0.25px]'>
+          <img src={item} alt="logo" className='w-[60%]'/>
+        </div>
+      )))}
+
+    </div>
   );
 };
 

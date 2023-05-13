@@ -5,6 +5,10 @@ import ProductCard from '../components/ProductCard';
 import HButtonLight from '../components/HButtonLight';
 import HButton from '../components/HButton';
 
+import product1 from "../components/product1.webp"
+import product2 from "../components/product2.webp"
+import product3 from "../components/product3.webp"
+
 const HomeCards = () => {
 
   const Heading = styled(Typography)(({ theme }) => ({
@@ -24,7 +28,7 @@ const HomeCards = () => {
   const products = [
     {
       id: 1,
-      image: 'product1.jpg',
+      image: product1,
       name: 'Product 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       price: '$10',
@@ -32,7 +36,7 @@ const HomeCards = () => {
     },
     {
       id: 2,
-      image: 'product2.jpg',
+      image: product2,
       name: 'Product 2',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
       price: '$15',
@@ -40,7 +44,7 @@ const HomeCards = () => {
     },
     {
       id: 3,
-      image: 'product3.jpg',
+      image: product3,
       name: 'Product 3',
       description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
       price: '$20',
@@ -49,29 +53,34 @@ const HomeCards = () => {
   ];
 
   return (
-    <>
-    <Grid container spacing={2} justifyContent="center">
+    <div>
+    <Grid container spacing={2} justifyContent="center" py={16}>
       <Grid item xs={12} textAlign="center">
-        <Heading variant="h4">Book now, maximize your returns</Heading>
+          <p className="text-6xl font-bold text-gray-900 mx-4">Book now, maximize your returns</p>
       </Grid>
       <Grid item xs={12} textAlign="center">
-        <SubHeading variant="h6">These are some of the companies that will present at our Demo Day.</SubHeading>
+          <p className='text-gray-500 text-lg'>These are some of the companies that will present at our Demo Day.</p>
       </Grid>
       <Grid item xs={12} textAlign="center">
-        <Content variant="body1">
+        <p className='text-gray-500 text-lg'>
           By booking your tokens now,
-        </Content>
-        <Content variant="body1">
+        </p>
+        <p className='text-gray-500 text-lg'>
           you get the best deals
-        </Content>
-        <Content variant="body1">
-          and will have a higher chance of maximizing your ROI.
-        </Content>
+        </p>
+        <p className='text-gray-500 text-lg'>
+            and will have a <span className='font-bold'>
+            higher chance of maximizing your ROI.
+            </span>
+        </p>
       </Grid>
     </Grid>
-    <Grid container spacing={2} justifyContent="center">
+      {/* <Grid container spacing={2} justifyContent="center"> */}
+      <div className='flex justify-center'>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 my-8">
+
       {products.map((product) => (
-        <Grid item key={product.id} xs={12} sm={6} md={4}>
           <ProductCard
             image={product.image}
             name={product.name}
@@ -79,12 +88,16 @@ const HomeCards = () => {
             price={product.price}
             owners={product.owners}
           />
-        </Grid>
       ))}
-    </Grid>
-    <CustomButtonGrid/>
-    <HButton>See More</HButton>
-    </>
+      </div>
+          
+        </div>
+          
+      <CustomButtonGrid />
+      <div className="flex justify-center my-8 ">
+        <HButton>See More</HButton>
+      </div>
+    </div>
   );
 };
 
@@ -92,63 +105,33 @@ const ButtonGrid = styled(Grid)(({ theme }) => ({
   marginTop: theme.spacing(2),
 }));
 
+
+const customButtons = [
+  "Web 3.0",
+  "Acceleration",
+  "Transportation",
+  "Consultancy",
+  "Food",
+  "Fin-Tech",
+  "Ideas",
+  "HealthCare",
+  "Sport",
+  "Micro-mobility"
+]
+
 const CustomButtonGrid = () => {
   return (
     <ButtonGrid container spacing={2}>
-      <Grid container item xs={12} spacing={2}>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Web 3.0 acceleration
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Acceleration
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Transportation
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Consultancy
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Food
-          </HButtonLight>
-        </Grid>
-      </Grid>
-      <Grid container item xs={12} spacing={2}>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Fin-Tech
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Ideas
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            HealthCare
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Sport
-          </HButtonLight>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <HButtonLight>
-            Micro-mobility
-          </HButtonLight>
-        </Grid>
-      </Grid>
+      <div className='grid grid-cols-5 gap-4 justify-center w-full px-4 sm:px-8 lg:px-16 xl:px-32'>
+
+        {customButtons.map(item => (
+          <HButtonLight
+            tw="py-4 "
+            key={item}>
+        {item}
+      </HButtonLight>))}
+      </div>
+
     </ButtonGrid>
   );
 };

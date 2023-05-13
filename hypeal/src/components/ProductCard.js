@@ -6,7 +6,8 @@ import HButton from './HButton';
 const CustomCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: 300,
+  maxWidth: 400,
+  borderRadius: 16,
 }));
 
 const CustomCardMedia = styled(CardMedia)(({ theme }) => ({

@@ -27,13 +27,12 @@ const products = [
 
 const HomeFeature = () => {
   return (
-    <CardGrid container spacing={2}>
+
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center'>
       {products.map((product) => (
-      <Grid item xs={12} sm={6} md={4}>
-        <FeatureCard title={product.title} description={product.description}/>
-      </Grid>
+        <FeatureCard title={product.title} description={product.description} />
       ))}
-    </CardGrid>
+    </div>  
   );
 };
 

@@ -53,7 +53,7 @@ const IconContainer = styled(Box)(({ theme }) => ({
 
 const FeatureCard = (props) => {
   return (
-    <CustomCard>
+    <CustomCard >
       <CustomCardContent>
         <IconContainer>
           <FontAwesomeIcon icon={faLightbulb} size="lg" />

@@ -10,23 +10,27 @@ function HomeMain() {
     <div className="Section">
       <Grid container width={"60vw"} spacing={2} alignItems="flex-start">
         <Grid item xs={12}>
-          <Typography color={"white"} variant="h6">Don't miss the Hypeal.
-          </Typography>
+          <p className="text-[#FFF5F0] text-6xl font-semibold">Don't miss the Hypeal.</p>
         </Grid>
         <Grid item xs={12}>
-          <Typography color={"white"} variant="body1">Join our Demo Day on March 15th, 2024.
-          </Typography>
+        <p className="text-gray-200 text-2xl">Join our Demo Day on March 15th, 2024.</p>
         </Grid>
-        <Grid item container xs={12} spacing={2} alignItems="center">
-          <Grid item xs={8}>
-            <HInput/>
-          </Grid>
-          <Grid item xs={4}>
-            <HButton variant="contained" color="primary" fullWidth>
+
+        <div className="mt-8 w-full ml-4">
+
+        <p className="text-gray-300 text-sm ">Enter your email here *</p>
+
+          <div className="flex flex-col sm:flex-row w-full gap-2">
+            
+
+        <HInput tw="flex-1" />
+        <HButton variant="contained" color="primary" fullWidth>
               KEEP ME POSTED
-            </HButton>
-          </Grid>
-        </Grid>
+        </HButton>
+        </div>
+        </div>
+
+
       </Grid>
       <img className="Background" src={HomeSection1} alt=""/>
     </div>

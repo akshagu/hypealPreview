@@ -19,50 +19,31 @@ const HomeMetrics = () => {
     <SectionContainer>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid item xs={12} textAlign="center">
-          <Typography color={"white"} variant="h4" gutterBottom>
+    
+          <p className='text-white font-bold text-4xl max-w-3xl mx-auto'>
+
             Tackling a huge market opportunity, with credentials
-          </Typography>
+            </p>
+
         </Grid>
-        <Grid item xs={6} sm={3}>
-          <MetricContainer>
-            <Typography color={"white"}  variant="h6" gutterBottom>
-              $560B
-            </Typography>
-            <Typography color={"white"}  variant="subtitle1" gutterBottom>
-              Market opportunity
-            </Typography>
-          </MetricContainer>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <MetricContainer>
-            <Typography color={"white"}  variant="h6" gutterBottom>
-              $5M
-            </Typography>
-            <Typography color={"white"}  variant="subtitle1" gutterBottom>
-              Already raised
-            </Typography>
-          </MetricContainer>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <MetricContainer>
-            <Typography color={"white"}  variant="h6" gutterBottom>
-              20+
-            </Typography>
-            <Typography color={"white"}  variant="subtitle1" gutterBottom>
-              Products launched
-            </Typography>
-          </MetricContainer>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <MetricContainer>
-            <Typography color={"white"}  variant="h6" gutterBottom>
-              500K
-            </Typography>
-            <Typography color={"white"}  variant="subtitle1" gutterBottom>
-              Community reach
-            </Typography>
-          </MetricContainer>
-        </Grid>
+        
+        <div className='grid grid-cols-2 md:grid-cols-4 justify-between w-full gap-4 my-8'  >
+
+        {[
+        {title:"Market opportunity",value:"$560B"},
+        {title:"Already raised",value:"$5M"},
+        {title:"Products launched",value:"20+"},
+        {title:"Community reach",value:"500K"},
+          ].map((item => (
+            <div className='text-white'>
+              <p className='text-[#FFEC01] text-6xl text-center'>{item.value}</p>
+              <p className='text-center'>{item.title}</p>
+            </div>
+          )))}
+          </div>
+
+
+
       </Grid>
     </SectionContainer>
   );

@@ -28,31 +28,39 @@ const Caption = styled(Typography)(({ theme }) => ({
 
 const HomeVision = () => {
   return (
-    <SectionContainer>
-      <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid item xs={12} textAlign="center">
-          <Typography variant="h4" gutterBottom>
-            Revolutionizing the world of ideas, startups, and company financing.
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <IconContainer>
+    <div className='my-16'>
+      <div className='flex justify-center'>
+        <p className='text-5xl font-bold max-w-2xl text-center mt-16'>
+          Revolutionizing the world of ideas, startups, and company financing.
+        </p>          
+      </div>
+      
+      <div className='flex justify-evenly my-16'>
+            {[
+            {
+              icon:<FontAwesomeIcon icon={faCircleCheck} size="5x" color='#FFEC01' />,
+              text: "Safe"
+            },
+            {
+              icon: <FontAwesomeIcon icon={faCircleHalfStroke} size="5x"  color='#FFEC01' />,
+              text: "Easy"
+            },
+            {
+              icon: <FontAwesomeIcon icon={faCircleDot} size="5x"  color='#FFEC01' />,
+              text: "Global"
+
+            }
+            ].map((item => (
+
             <IconWrapper>
-              <FontAwesomeIcon icon={faCircleCheck} size="3x" />
-              <Caption variant="body2">Safe</Caption>
+              {item.icon}
+              <Caption variant="body2">{item.text}</Caption>
             </IconWrapper>
-            <IconWrapper>
-              <FontAwesomeIcon icon={faCircleHalfStroke} size="3x" />
-              <Caption variant="body2">Easy</Caption>
-            </IconWrapper>
-            <IconWrapper>
-              <FontAwesomeIcon icon={faCircleDot} size="3x" />
-              <Caption variant="body2">Global</Caption>
-            </IconWrapper>
-          </IconContainer>
-        </Grid>
-      </Grid>
-    </SectionContainer>
+            )))}
+      </div>
+        
+          
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const Custom = styled(Input)(({ theme, hasText }) => ({
   },
 }));
 
-const HInput = () => {
+const HInput = ({tw}) => {
   const [inputText, setInputText] = useState('');
 
   const handleInputChange = (event) => {
@@ -27,6 +27,7 @@ const HInput = () => {
 
   return (
     <Custom
+      className={tw}
       value={inputText}
       onChange={handleInputChange}
       hasText={inputText !== ''}
