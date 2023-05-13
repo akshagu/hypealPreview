@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { Card, CardContent, CardMedia, Typography, Button, Grid } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import HButton from './HButton';
 
 const CustomCard = styled(Card)(({ theme }) => ({
@@ -11,10 +11,6 @@ const CustomCard = styled(Card)(({ theme }) => ({
 
 const CustomCardMedia = styled(CardMedia)(({ theme }) => ({
   paddingTop: '56.25%', // 16:9 aspect ratio for the image
-}));
-
-const CustomButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(2),
 }));
 
 const ProductCard = ({ image, name, description, price, owners }) => {

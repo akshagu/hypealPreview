@@ -28,7 +28,7 @@ function HomeMain() {
           </Grid>
         </Grid>
       </Grid>
-      <img className="Background" src={HomeSection1}/>
+      <img className="Background" src={HomeSection1} alt=""/>
     </div>
   );
 }
