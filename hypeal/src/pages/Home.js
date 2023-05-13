@@ -6,7 +6,8 @@ import HInput from "../components/HInput";
 import HomeCards from "./HomeCards"
 import HomeInvest from "./HomeInvest";
 import HomeLaunch from "./HomeLaunch";
-import HomeFeature from "./HomeFeature"
+import HomeFeature from "./HomeFeature";
+import HomeVision from "./HomeVision"
 
 function Home() {
 
@@ -39,6 +40,7 @@ function Home() {
       <HomeInvest/>
       <HomeLaunch/>
       <HomeFeature/>
+      <HomeVision/>
     </div>
   );
 }
