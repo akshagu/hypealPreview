@@ -9,6 +9,7 @@ import HomeLaunch from "./HomeLaunch";
 import HomeFeature from "./HomeFeature";
 import HomeVision from "./HomeVision"
 import HomeMetrics from "./HomeMetrics";
+import HomePartners from "./HomePartners";
 
 function Home() {
 
@@ -42,7 +43,7 @@ function Home() {
       <HomeLaunch/>
       <HomeFeature/>
       <HomeVision/>
-      <HomeMetrics/>
+      <HomePartners/>
     </div>
   );
 }
