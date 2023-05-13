@@ -6,6 +6,8 @@ import HInput from "../components/HInput";
 import HomeCards from "./HomeCards"
 import HomeInvest from "./HomeInvest";
 import HomeLaunch from "./HomeLaunch";
+import HomeFeature from "./HomeFeature"
+
 function Home() {
 
   return (
@@ -36,6 +38,7 @@ function Home() {
       <HomeCards/>
       <HomeInvest/>
       <HomeLaunch/>
+      <HomeFeature/>
     </div>
   );
 }
