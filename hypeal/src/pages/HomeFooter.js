@@ -6,7 +6,7 @@ import HButton from '../components/HButton';
 import HButtonLight from '../components/HButtonLight';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
-  backgroundColor: '#FFC107',
+  backgroundColor: '#FFEC01',
   padding: theme.spacing(4),
 }));
 
@@ -23,7 +23,7 @@ const HomeFooter = () => {
         <p className='text-5xl font-bold mt-8 mb-16'>
           Stay Tuned!
         </p>
-        <div className="mt-8 w-full ml-4">
+        <div className="mt-8 w-full max-w-4xl ml-4">
 
       <p className="text-gray-700 text-sm ">Enter your email here *</p>
 
