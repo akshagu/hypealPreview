@@ -2,6 +2,8 @@ import React from 'react';
 import { styled } from '@mui/system';
 import {Grid, Typography} from '@mui/material';
 import ProductCard from '../components/ProductCard';
+import HButtonLight from '../components/HButtonLight';
+import HButton from '../components/HButton';
 
 const HomeCards = () => {
 
@@ -80,7 +82,74 @@ const HomeCards = () => {
         </Grid>
       ))}
     </Grid>
+    <CustomButtonGrid/>
+    <HButton>See More</HButton>
     </>
+  );
+};
+
+const ButtonGrid = styled(Grid)(({ theme }) => ({
+  marginTop: theme.spacing(2),
+}));
+
+const CustomButtonGrid = () => {
+  return (
+    <ButtonGrid container spacing={2}>
+      <Grid container item xs={12} spacing={2}>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Web 3.0 acceleration
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Acceleration
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Transportation
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Consultancy
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Food
+          </HButtonLight>
+        </Grid>
+      </Grid>
+      <Grid container item xs={12} spacing={2}>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Fin-Tech
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Ideas
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            HealthCare
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Sport
+          </HButtonLight>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <HButtonLight>
+            Micro-mobility
+          </HButtonLight>
+        </Grid>
+      </Grid>
+    </ButtonGrid>
   );
 };
 
