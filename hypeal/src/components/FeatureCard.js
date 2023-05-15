@@ -3,6 +3,7 @@ import { styled } from '@mui/system';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import SlideRightWhenVisible from '../hooks/SlideRightWhenVisible';
 
 const CustomCard = styled(Card)(({ theme }) => ({
   background: '#000000',
@@ -54,18 +55,25 @@ const IconContainer = styled(Box)(({ theme }) => ({
 const FeatureCard = (props) => {
   return (
     <CustomCard >
+        <SlideRightWhenVisible>
+
       <CustomCardContent>
         <IconContainer>
           <FontAwesomeIcon icon={faLightbulb} size="lg" />
         </IconContainer>
+          
         <Title variant="h6" gutterBottom>
         {props.title}
         </Title>
         <Description variant="body2" gutterBottom>
         {props.description}
         </Description>
-        <YellowBar />
       </CustomCardContent>
+      </SlideRightWhenVisible>
+      <div className='flex justify-center'>
+
+        <YellowBar />
+      </div>
     </CustomCard>
   );
 };

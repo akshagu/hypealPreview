@@ -5,6 +5,7 @@ import discovery from "../components/discovery.webp"
 import bbc from "../components/bbc.webp"
 import tedx from "../components/tedx.webp"
 import forbes from "../components/forbes.webp"
+import SlideRightWhenVisible from '../hooks/SlideRightWhenVisible';
 
 
 const SectionContainer = styled(Box)(({ theme }) => ({
@@ -21,13 +22,22 @@ const CellContainer = styled(Box)(({ theme }) => ({
 const HomePartners = () => {
   return (
     <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-black px-8 py-16'>
+        
+
       <div className='flex items-center justify-center border-gray-400 border-[0.25px]'>
-        <p className='text-5xl font-semibold text-white'>Our <span className='block text-[#FFEC01]'>Partners</span></p>
-      </div>
+      <SlideRightWhenVisible>
+        <p className='text-5xl mx-auto font-semibold text-white'>Our <span className='block text-[#FFEC01]'>Partners</span></p>
+        </SlideRightWhenVisible>
+        </div>
+        
         
       {[discovery, bbc, tedx, forbes].map((item => (
         <div className='flex items-center justify-center border-gray-400 border-[0.25px]'>
-          <img src={item} alt="logo" className='w-[60%]'/>
+          <SlideRightWhenVisible>
+            
+
+          <img src={item} alt="logo" className='w-[60%] mx-auto'/>
+      </SlideRightWhenVisible>
         </div>
       )))}
 

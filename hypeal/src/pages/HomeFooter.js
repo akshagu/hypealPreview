@@ -1,8 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import HInput from '../components/HInput';
-import HButton from '../components/HButton';
 import HButtonLight from '../components/HButtonLight';
 
 const SectionContainer = styled(Box)(({ theme }) => ({

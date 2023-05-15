@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system';
 import { Grid, Typography, Box } from '@mui/material';
+import SlideRightWhenVisible from '../hooks/SlideRightWhenVisible';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -36,8 +37,12 @@ const HomeMetrics = () => {
         {title:"Community reach",value:"500K"},
           ].map((item => (
             <div className='text-white'>
+              <SlideRightWhenVisible>
+
               <p className='text-[#FFEC01] text-6xl text-center'>{item.value}</p>
-              <p className='text-center'>{item.title}</p>
+                <p className='text-center'>{item.title}</p>
+              </SlideRightWhenVisible>
+                
             </div>
           )))}
           </div>

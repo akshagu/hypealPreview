@@ -3,12 +3,15 @@ import HomeSection1 from "../components/HomeSection1.webp"
 import {Grid, Typography} from "@mui/material";
 import HButton from "../components/HButton.js";
 import HInput from "../components/HInput";
+import SlideRightWhenVisible from "../hooks/SlideRightWhenVisible";
 
 function HomeMain() {
 
   return (
     <div className="Section">
       <Grid container width={"60vw"} spacing={2} alignItems="flex-start">
+        <SlideRightWhenVisible>
+          
         <Grid item xs={12}>
           <p className="text-[#FFF5F0] text-6xl font-semibold">Don't miss the Hypeal.</p>
         </Grid>
@@ -30,6 +33,7 @@ function HomeMain() {
         </div>
         </div>
 
+        </SlideRightWhenVisible>
 
       </Grid>
       <img className="Background" src={HomeSection1} alt=""/>
