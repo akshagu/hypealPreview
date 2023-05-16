@@ -1,23 +1,9 @@
 import React from 'react';
-import { styled } from '@mui/system';
-import { Box, Grid, Typography } from '@mui/material';
 import discovery from "../components/discovery.webp"
 import bbc from "../components/bbc.webp"
 import tedx from "../components/tedx.webp"
 import forbes from "../components/forbes.webp"
 import SlideRightWhenVisible from '../hooks/SlideRightWhenVisible';
-
-
-const SectionContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(4),
-  backgroundColor: "black"
-}));
-
-const CellContainer = styled(Box)(({ theme }) => ({
-  border: '1px solid #E0E0E0',
-  height: "250px",
-  width: "250px",
-}));
 
 const HomePartners = () => {
   return (
