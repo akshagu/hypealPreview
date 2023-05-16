@@ -1,6 +1,6 @@
 import React from "react";
 import HomeSection1 from "../components/HomeSection1.webp"
-import {Grid, Typography} from "@mui/material";
+import {Grid} from "@mui/material";
 import HButton from "../components/HButton.js";
 import HInput from "../components/HInput";
 import SlideRightWhenVisible from "../hooks/SlideRightWhenVisible";

@@ -1,54 +1,5 @@
 import React from 'react';
-import { styled } from '@mui/system';
-import { Box, Grid, Typography } from '@mui/material';
-import HomeSection1 from "../components/HomeSection1.webp"
 import HButton from "../components/HButton"
-
-const SectionContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(4),
-  backgroundColor: '#F8F8F8',
-}));
-
-const ImageContainer = styled(Box)(({ theme }) => ({
-  position: 'relative',
-  left: "20vw",
-  width: '100%',
-  marginBottom: theme.spacing(2),
-}));
-
-const OverlayBox = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  top: "10%",
-  left: "-10vw",
-  width: '50%',
-  height: '80%',
-  backgroundColor: '#000000',
-  zIndex: 1,
-  opacity: 0.8,
-}));
-
-const TextContainer = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  width: '90%',
-  height: '100%',
-  zIndex: 2,
-  padding: theme.spacing(2),
-}));
-
-const Title = styled(Typography)(({ theme }) => ({
-  color: '#FFFFFF',
-  fontWeight: 'bold',
-  marginBottom: theme.spacing(2),
-}));
-
-const Description = styled(Typography)(({ theme }) => ({
-  color: '#FFFFFF',
-  marginBottom: theme.spacing(2),
-}));
 
 const HomeLaunch = () => {
   return (

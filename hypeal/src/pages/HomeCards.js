@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import {Grid, Typography} from '@mui/material';
+import {Grid} from '@mui/material';
 import ProductCard from '../components/ProductCard';
 import HButtonLight from '../components/HButtonLight';
 import HButton from '../components/HButton';
@@ -10,19 +10,6 @@ import product2 from "../components/product2.webp"
 import product3 from "../components/product3.webp"
 
 const HomeCards = () => {
-
-  const Heading = styled(Typography)(({ theme }) => ({
-    fontWeight: 'bold',
-  }));
-
-  const SubHeading = styled(Typography)(({ theme }) => ({
-    marginTop: theme.spacing(2),
-  }));
-
-  const Content = styled(Typography)(({ theme }) => ({
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-  }));
 
   // Sample data for the products
   const products = [

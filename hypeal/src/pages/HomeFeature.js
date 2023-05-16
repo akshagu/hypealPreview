@@ -1,11 +1,5 @@
 import React from 'react';
-import { styled } from '@mui/system';
-import { Grid } from '@mui/material';
 import FeatureCard from '../components/FeatureCard';
-
-const CardGrid = styled(Grid)(({ theme }) => ({
-  marginTop: theme.spacing(4),
-}));
 
 const products = [
   {

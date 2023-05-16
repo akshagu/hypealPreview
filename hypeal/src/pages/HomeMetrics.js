@@ -1,18 +1,11 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Box } from '@mui/material';
 import SlideRightWhenVisible from '../hooks/SlideRightWhenVisible';
 
 const SectionContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(4),
   backgroundColor: '#000000',
-}));
-
-const MetricContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  margin: theme.spacing(2),
 }));
 
 const HomeMetrics = () => {

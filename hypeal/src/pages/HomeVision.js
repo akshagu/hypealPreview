@@ -1,18 +1,8 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import { Grid, Typography, Box } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faCircleHalfStroke, faCircleDot } from '@fortawesome/free-solid-svg-icons';
-
-const SectionContainer = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(4),
-  backgroundColor: '#F8F8F8',
-}));
-
-const IconContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-}));
 
 const IconWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
