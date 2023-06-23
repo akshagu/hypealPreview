@@ -4,14 +4,18 @@ import './App.css';
 
 //Import Pages lazily
 const Home = React.lazy(() => import("./pages/Home"));
+const KYC = React.lazy(() => import("./pages/KYC"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 
 function App() {
+  const [isIframe, setIsIframe] = React.useState(window.location !== window.parent.location);
+
   return (
     <Router>
-      <Navbar/>
+      {!isIframe && <Navbar/>}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/kyc" element={<KYC />} />
       </Routes>
     </Router>
   );
