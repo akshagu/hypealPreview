@@ -1,4 +1,4 @@
-import { usePlaidLink, PlaidLink } from 'react-plaid-link';
+import { PlaidLink } from 'react-plaid-link';
 
 function KYC() {
   const handleOnExit = ({tw}) => {};

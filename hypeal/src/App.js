@@ -8,7 +8,7 @@ const KYC = React.lazy(() => import("./pages/KYC"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 
 function App() {
-  const [isIframe, setIsIframe] = React.useState(window.location !== window.parent.location);
+  const isIframe = (window.location !== window.parent.location);
 
   return (
     <Router>
