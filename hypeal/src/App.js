@@ -14,7 +14,7 @@ function App() {
     <Router>
       {!isIframe && <Navbar/>}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<KYC />} />
         <Route path="/kyc" element={<KYC />} />
       </Routes>
     </Router>
