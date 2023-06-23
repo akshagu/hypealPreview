@@ -1,38 +1,23 @@
-import { usePlaidLink, PlaidLinkOnSuccess } from 'react-plaid-link';
-import HButton from "../components/HButton.js";
-import { useState, useEffect, useCallback } from 'react';
+import { usePlaidLink, PlaidLink } from 'react-plaid-link';
 
 function KYC() {
-  const [token, setToken] = useState(null);
-
-  // get link_token from your server when component mounts
-  useEffect(() => {
-    const createLinkToken = async () => {
-      const response = await fetch('/api/create_link_token', { method: 'POST' });
-      const { link_token } = await response.json();
-      setToken(link_token);
-    };
-    createLinkToken();
-  }, []);
-
-  const onSuccess = useCallback<PlaidLinkOnSuccess>((publicToken, metadata) => {
-    // send public_token to your server
-    // https://plaid.com/docs/api/tokens/#token-exchange-flow
-    console.log(publicToken, metadata);
-  }, []);
-
-  const { open, ready } = usePlaidLink({
-    token,
-    onSuccess,
-    // onEvent
-    // onExit
-  });
+  const handleOnExit = ({tw}) => {};
+  const handleOnSuccess = ({tw}) => {};
 
   return (
     <div className="KYC">
-      <HButton variant="contained" color="primary" onClick={() => open()} disabled={!ready}>
-        Reserve Free Token
-      </HButton>
+      <PlaidLink
+        style={{backgroundColor:'#FFEB3B',color:"#000000", padding:10}}
+        clientName="React Plaid Setup"
+        env="sandbox"
+        product={["auth", "transactions"]}
+        publicKey="add your public key here"
+        onExit={handleOnExit}
+        onSuccess={handleOnSuccess}
+        className="test"
+      >
+        Reserve Free token      
+      </PlaidLink>
     </div>
   );
 }
