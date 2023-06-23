@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
 
 //Import Pages lazily
-const Home = React.lazy(() => import("./pages/Home"));
 const KYC = React.lazy(() => import("./pages/KYC"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 

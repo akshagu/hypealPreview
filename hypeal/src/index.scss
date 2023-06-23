@@ -39,9 +39,9 @@ code {
 .KYC {
   width: 100%;
   height: 100%;
-  padding-top: calc(50px + 4vw);
   scroll-snap-type: y mandatory;
   overflow: scroll;
+  background-color: black;
 }
 
 .Home .Section {
